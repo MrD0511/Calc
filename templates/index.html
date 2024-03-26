@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<style>
+  .container{
+    margin-top: 30px;
+  }
+</style>
+<form class="container" action="" method="POST">
+    <div class="mb-3" >
+      <label for="text" class="form-label">Expression</label>
+      <input type="text" class="form-label" name="expression" id="expression">
+    </div>
+    {% if val %}
+    <div>
+        <label for="text" class="form-label">Ans: {{val}}</label>
+    </div>
+    {% endif %}
+    <button type="submit" class="btn btn-outline-dark" href="/">Submit</button>
+  </form>
+
+{% endblock body %}
